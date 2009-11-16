@@ -1,0 +1,26 @@
+;; Object semantic.cache
+;; SEMANTICDB Tags save file
+(semanticdb-project-database "semantic.cache"
+  :file "semantic.cache"
+  :tables (list 
+   (semanticdb-table "word-to-emacs.el"
+    :file "word-to-emacs.el"
+    :pointmax 568
+    :major-mode 'emacs-lisp-mode
+    :tokens '(("getName" function nil nil nil (setq name (substring (buffer-name) 0 (string-match "\\.doc" (buffer-name)))) nil [195 296]) ("convert" function nil nil nil (let (getName) (and (shell-command (concat "antiword " (concat (getName) ".doc"))))) nil [298 432]) ("word-to-emacs" function nil nil nil (convert) nil [434 541]) ("word-to-emacs" package nil nil nil [543 567]))
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "screenplay.el"
+    :file "screenplay.el"
+    :pointmax 8515
+    :major-mode 'emacs-lisp-mode
+    :tokens '(("screenplay-version" variable nil "0.7.0" ((const . t)) "Current Emacs Screenplay Mode version number." nil [3039 3126]) ("screenplay-author-name" variable nil "V. L. Simpson" ((const . t)) nil nil [3127 3177]) ("screenplay-author-email" variable nil "vls@freeshell.org" ((const . t)) nil nil [3178 3232]) ("screenplay-web-page" variable nil "http://www.nongnu.org/screenplay/" ((const . t)) nil nil [3233 3303]) ("screenplay-bug-address" variable nil "screenplay-bug@nongnu.org" ((const . t)) "Bug reports for Screenplay Mode go here." nil [3304 3412]) ("defgroup" code nil [3414 3544]) ("screenplay-mode-hook" variable nil (quote auto-fill-mode) nil "List of functions to call when entering Screenplay Mode." nil [3689 3833]) ("screenplay-left-margin" variable nil 0 nil "Left margin for scene headings and action blocks" nil [3835 3963]) ("screenplay-right-margin" variable nil 50 nil "Right margin for scene-headings and action blocks" nil [3965 4095]) ("scrn-scene-hist" variable nil nil nil "History list for scene headings." nil [4155 4219]) ("scrn-dialog-name-hist" variable nil nil nil "History list for dialog block name attribute." nil [4221 4304]) ("define-derived-mode" code nil [4306 4904]) ("scrn-margins" function nil nil nil "Set left-margin and fill-column for slugline and action blocks." nil [4906 5086]) ("screenplay-read-slugline" function nil nil nil "Get scene heading.
+Returns scene heading in upper-case format." nil [5088 5688]) ("scrn-edit-slugline" function nil nil nil (cond (current-prefix-arg (scrn-margins) nil) (t (screenplay-read-slugline))) nil [5690 5834]) ("screenplay-slugline" function nil ("scene") ((user-visible . t)) "Insert a scene heading.
+To edit an existing scene heading, put the cursor on that line
+and call this function with a prefix-arg, i.e, C-u TAB-RET." nil [5836 6270]) ("screenplay-action-block" function nil nil ((user-visible . t)) "Edit a description block.
+With a prefix argument, just set margins and fill-column for an
+action block element." nil [6272 6614]) ("screenplay-dialog-char-name" function nil nil nil "Return uppercase dialog block character tag." nil [6616 7079]) ("screenplay-dialog-left-margin" variable nil 10 nil nil nil [7081 7122]) ("screenplay-dialog-right-margin" variable nil 40 nil nil nil [7123 7165]) ("scrn-dialog-margins" function nil nil nil (setq left-margin screenplay-dialog-left-margin) nil [7167 7300]) ("scrn-edit-dialog" function nil nil nil (cond (current-prefix-arg (scrn-dialog-margins) (use-hard-newlines 1 t) nil) (t (screenplay-dialog-char-name))) nil [7302 7487]) ("screenplay-dialog-block" function nil ("name") ((user-visible . t)) "Edit dialog block." nil [7489 7896]) ("screenplay-version" function nil nil ((user-visible . t)) "Display current program version in echo area." nil [7898 8053]) ("screenplay-submit-bug-report" function nil nil ((user-visible . t)) "Submit a bug report for Screenplay Mode." nil [8055 8463]) ("screenplay" package nil nil nil [8465 8486]))
+    :unmatched-syntax 'nil
+    )
+   )
+  )
